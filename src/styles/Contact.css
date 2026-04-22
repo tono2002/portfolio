@@ -1,0 +1,70 @@
+.contact {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.contact__title {
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+.contact__sub {
+  font-size: 19px;
+  color: var(--text-secondary);
+  margin-bottom: 48px;
+  line-height: 1.6;
+}
+
+.contact__actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 64px;
+}
+
+.contact__socials {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contact__social-link {
+  font-size: 14px;
+  color: var(--text-secondary);
+  transition: color 0.2s;
+  letter-spacing: 0.01em;
+}
+.contact__social-link:hover { color: var(--text-primary); }
+
+.contact__footer {
+  margin-top: 120px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-tertiary);
+}
+
+/* Bottom glow */
+.contact::after {
+  content: '';
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse at center, rgba(0, 113, 227, 0.12), transparent 70%);
+  pointer-events: none;
+}
